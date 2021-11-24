@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <meta name="author" content="llango">
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>部署文档 - 基于Github Pages 发布 MkDocs中文文档</title>
+    <!-- <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" /> -->
+    <!-- 添加的样式 -->
+    <link href="../../css/shadocs.css" rel="stylesheet">
+    <link href="../../css/shaphinx.css" rel="stylesheet">
+    <link href="../../css/shaphinx-extensions.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
+    <script>
+    // Current page data
+    var mkdocs_page_name = "\u90e8\u7f72\u6587\u6863";
+    var mkdocs_page_input_path = "user-guide/deploying-your-docs.md";
+    var mkdocs_page_url = "/llango/shadocs/user-guide/deploying-your-docs/";
+
+    </script>
+    
+    <script src="../../js/jquery-2.1.1.min.js" defer></script>
+    <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+
+    </script> 
+    
+</head>
+
+<body  role="document">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>内容</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>目录</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+    <input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+    <input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+    <label class="overlay sidebar-overlay" for="__navigation"></label>
+    <label class="overlay toc-overlay" for="__toc"></label>
+
+    
+
+    <div class="page">
+        <header class="mobile-header">
+            <div class="header-left">
+            <label class="nav-overlay-icon" for="__navigation">
+                <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+            </label>
+            </div>
+            <div class="header-center">
+                <a href="../.."> <div class="brand">基于Github Pages 发布 MkDocs中文文档 文档</div></a>
+            </div>
+            <div class="header-right">
+            <label class="toc-overlay-icon toc-header-icon" for="__toc">
+                <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+            </label>
+            </div>
+        </header>
+
+        <aside class="sidebar-drawer">
+            <div class="sidebar-container">
+            
+            <div class="sidebar-sticky">
+                <a class="sidebar-brand" href="../..">
+  
+  
+  <span class="sidebar-brand-text">基于Github Pages 发布 MkDocs中文文档 文档</span>
+  
+</a>
+                <!-- <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" title="Type search term here" />
+  </form>
+</div> -->
+                    <div role="search">
+  <form id ="rtd-search-form" class="sidebar-search-container" action="../../search.html" method="get">
+    <input class="sidebar-search" type="text" name="q" placeholder="搜索文档" title="输入关键字" />
+  </form>
+</div>
+                <div class="sidebar-scroll">
+                <div class="sidebar-tree">
+  <ul class="current">
+    
+    
+        <li class="toctree-l1">
+            <a class="reference internal" href="../..">主页</a>
+        </li>
+    
+    
+    
+        <li class="toctree-l1 has-children">
+            <a href="#" class="current reference internal">用户指南</a>
+            <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox">
+            <label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+            <ul>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../writing-your-docs/" class="reference internal">编写文档</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../styling-your-docs/" class="reference internal">设置文档样式</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../configuration/" class="reference internal">配置文件</a>
+</li>
+            
+                
+<li class="toctree-l2  current-page">
+    <a href="./" class="reference internal current">部署文档</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../custom-themes/" class="reference internal">自定义主题</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../plugins/" class="reference internal">插件</a>
+</li>
+            
+            </ul>
+        </li>
+    
+    
+    
+        <li class="toctree-l1 has-children">
+            <a href="#" class="current reference internal">关于</a>
+            <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox">
+            <label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+            <ul>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../../about/release-notes/" class="reference internal">发行说明</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../../about/contributing/" class="reference internal">贡献</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../../about/license/" class="reference internal">许可</a>
+</li>
+            
+            </ul>
+        </li>
+    
+    
+  </ul>
+</div>
+                
+
+                </div>
+            </div>
+            
+            </div>
+            
+<ul class="breadcrumbs">å
+    <li>
+      
+        <a class="breadcrumbs-link" href="https://github.com/llango/shadocs/edit/master/docs/user-guide/deploying-your-docs.md"
+          class="icon icon-github"> 编辑该页面: GitHub</a>
+      
+    </li>
+  </ul>
+
+        </aside>
+
+        <main class="main">
+            <div class="content">
+            <article role="main">
+                <label class="toc-overlay-icon toc-content-icon" for="__toc">
+                <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+                </label>
+                
+                    <h1 id="_1">部署文档<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>将文档部署到各种托管服务提供商的基本指南</p>
+<hr />
+<h2 id="github-pages">GitHub Pages<a class="headerlink" href="#github-pages" title="Permanent link">&para;</a></h2>
+<p>如果您在<a href="https://github.com/">GitHub</a>上托管项目的源代码，则可以轻松使用<a href="https://pages.github.com/">GitHub Pages</a>来托管项目的文档。GitHub页面有两种基本类型：<a href="https://help.github.com/articles/user-organization-and-project-pages/#project-pages-sites">Project Pages</a>站点和<a href="https://help.github.com/articles/user-organization-and-project-pages/#user-and-organization-pages-sites">User and Organization Pages</a>站点。它们几乎完全相同但有一些重要的区别，在部署时需要不同的工作流程。</p>
+<h3 id="project-pages">Project Pages<a class="headerlink" href="#project-pages" title="Permanent link">&para;</a></h3>
+<p>项目页面站点更简单，因为站点文件被部署到项目存储库中的分支（默认情况下为“gh-pages”）。 在“checkout”git存储库的主要工作分支（通常是<code>master</code>）之后，您可以在其中维护项目的源文档，运行以下命令：</p>
+<pre><code class="language-sh">mkdocs gh-deploy
+</code></pre>
+<p>就是这么简单就完成了部署！ MkDocs将构建您的文档并使用<a href="https://github.com/davisp/ghp-import">ghp-import</a>工具将它们提交到<code>gh-pages</code>分支，然后将<code>gh-pages</code>分支推送到GitHub。</p>
+<p>使用<code>mkdocs gh-deploy --help</code>获取可用于<code>gh-deploy</code>命令的完整选项列表。</p>
+<p>请注意，在将其推送到GitHub之前，您将无法查看构建的站点。 因此，您可能希望通过使用<code>build</code>或<code>serve</code>命令并在本地查看构建的文件来验证您对文档所做的任何更改。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告：</p>
+<p>如果使用<code>gh-deploy</code>命令，则不应手动编辑页面存储库中的文件，因为手动所作的更改在下次运行该命令的时候将丢失。 </p>
+</div>
+<h3 id="organization-and-user-pages">Organization and User Pages<a class="headerlink" href="#organization-and-user-pages" title="Permanent link">&para;</a></h3>
+<p>User and Organization Pages站点不依赖于特定项目，站点文件部署到以“GitHub”帐户名命名的专用存储库中的“master”分支。 因此，您需要在本地系统上使用两个存储库的工作副本。 例如，请考虑以下文件结构：</p>
+<pre><code class="language-no-highlight">my-project/
+    mkdocs.yml
+    docs/
+orgname.github.io/
+</code></pre>
+<p>在制作并验证项目更新后，您需要将目录更改为<code>orgname.github.io</code>存储库并从那里调用<code>mkdocs gh-deploy</code>命令：</p>
+<pre><code class="language-sh">cd ../orgname.github.io/
+mkdocs gh-deploy --config-file ../my-project/mkdocs.yml --remote-branch master
+</code></pre>
+<p>需要注意的是，您需要显式指向<code>mkdocs.yml</code>配置文件，因为它不再位于当前工作目录中。 您还需要通知部署脚本提交到<code>master</code>分支。 您可以使用<a href="../configuration/#remote_branch">remote_branch</a>配置设置覆盖默认值，但是如果您在运行部署脚本之前忘记更改目录，它将提交到可能不是你期望的项目的<code>master</code>分支。</p>
+<p>请注意，在将其推送到GitHub之前，您将无法查看构建的站点。 因此，您可能希望通过使用<code>build</code>或<code>serve</code>命令并在本地查看构建的文件来验证您对文档所做的任何更改。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告：</p>
+<p>如果使用<code>gh-deploy</code>命令，则不应手动编辑页面存储库中的文件，因为手动所作的更改在下次运行该命令的时候将丢失。 </p>
+</div>
+<h3 id="_2">自定义域名<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>GitHub Pages支持为您的站点使用[自定义域名]。除了GitHub记录的步骤之外，您还需要执行一个额外的步骤，以便MkDocs可以与您的自定义域一起使用。您需要将“CNAME”文件添加到<a href="../configuration/#docs_dir">docs_dir</a>的根目录中。该文件必须在一行中包含一个裸域或子域（请参阅MkDocs自己的[CNAME文件]作为示例）。您可以手动创建文件，或使用GitHub的Web界面设置自定义域（在Settings/Custom Domain下）。如果您使用Web界面，GitHub将为您创建<code>CNAME</code>文件并将其保存到“pages”分支的根目录。因此，下次部署时不会删除该文件，您需要将文件复制到<code>docs_dir</code>。将文件正确地包含在<code>docs_dir</code>中，MkDocs将在您构建的站点中包含该文件，并在每次运行<code>gh-deploy</code>命令时将其推送到“pages”分支。</p>
+<p>如果您在使自定义域名时遇到问题，请参阅<a href="https://help.github.com/articles/troubleshooting-custom-domains/">Troubleshooting custom domains</a>的GitHub文档。</p>
+<h2 id="read-the-docs">Read the Docs<a class="headerlink" href="#read-the-docs" title="Permanent link">&para;</a></h2>
+<p><a href="https://readthedocs.org/">Read the Docs</a>提供免费文档托管。您可以使用任何主要版本控制系统导入文档，包括Mercurial，Git，Subversion和Bazaar。Read the Docs支持MkDocs开箱即用。 按照其网站上的[说明]正确排列存储库中的文件，创建一个帐户并将其指向您公开托管的存储库。如果配置正确，每次将提交推送到公共存储库时，文档都会更新。</p>
+<div class="admonition note">
+<p class="admonition-title">注意：</p>
+<p>要从Read the Docs提供的所有<a href="https://read-the-docs.readthedocs.io/en/latest/features.html">功能</a>中受益，您需要使用MkDocs附带的<a href="../styling-your-docs/#readthedocs">Read the Docs主题</a>。 Read the Docs文档中提到的各种主题是Sphinx特定主题，不适用于MkDocs。</p>
+</div>
+<h2 id="_3">其他提供商<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>任何可以提供静态文件的托管服务的提供商都可以用来部署MkDocs生成的文档。虽然不能一一提供每个服务商的部署方式，但是以下指南可以提供一些一般性的帮助。 </p>
+<p>当您构建站点时（使用<code>mkdocs build</code>命令），所有文件都将写入您的<code>mkdocs.yaml</code>配置文件中给<a href="../configuration/#site_dir">site_dir</a>选项所设置的目录中（默认为“site”）。 通常，您只需将该目录的内容复制到托管服务提供商服务器的根目录。 根据您的托管服务提供商的设置，您可能需要使用图形或命令行<a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">ftp</a>，<a href="https://en.wikipedia.org/wiki/Secure_Shell">ssh</a>或<a href="https://en.wikipedia.org/wiki/Secure_copy">scp</a>客户端来传输文件。</p>
+<p>例如，命令行中的一组典型命令可能如下所示：</p>
+<pre><code class="language-sh">mkdocs build
+scp -r ./site user@host:/path/to/server/root
+</code></pre>
+<p>当然，您需要将“user”替换为您的托管服务提供商的用户名，“host”替换为你自己的域名。 此外，您需要调整路径<code>/path/to/server/root</code>以匹配主机文件系统的配置。</p>
+<p>有关详细信息，请参阅相应服务商的说明文档。 您可能希望在其文档中搜索“ftp”或“上传站点(uploading site)”。</p>
+<h2 id="404">404页面<a class="headerlink" href="#404" title="Permanent link">&para;</a></h2>
+<p>当MkDocs构建文档时，它将在<a href="../configuration/#site_dir">构建目录</a>中包含一个404.html文件。 部署到<a href="#github-pages">GitHub</a>时，将自动使用此文件，但仅限于自定义域名。其他Web服务器可以配置使用它，但该功能并不总是可用。 有关详细信息，请参阅所选Web服务器的文档。</p>
+                
+            </article>
+            
+
+            <footer>
+                
+                <div class="related-pages">
+                        <li class="nolist">
+                            <a  class="prev-page" rel="prev" href="../configuration/">
+                                <svg><use href="#svg-arrow-right"></use></svg>
+                                <div class="page-info">
+                                    <div class="context">
+                                        <span>前一页</span>
+                                    </div>
+                                <div class="title">配置文件</div> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nolist ">
+                            <a  class="next-page" rel="next" href="../custom-themes/">
+                                <div class="page-info">
+                                    <div class="context">
+                                    <span>下一页</span>
+                                    </div>
+                                    <div class="title">自定义主题</div> 
+                                </div>
+                                <svg><use href="#svg-arrow-right"></use></svg>
+                            </a>
+                        </li>
+                </div>
+
+                <div class="related-information">
+                    
+                
+                    
+                        <p>
+                        <small>Shadocs使用证书为: <a href='https://github.com/llango/shadocs/blob/master/LICENSE.md'>MIT license</a></small><br>
+                        
+                        <small>文档使用 <a href="http://www.mkdocs.org/">MkDocs</a>构建。采用的主题为<a href="http://llango.com">llango</a>创建<a href="http://github.com/llango/shadocs">Shadocs</a>。</small>
+                        </p>
+                    
+
+                    
+            
+                    
+                </div>
+                
+            </footer>
+            </div>
+            
+            <aside class="toc-drawer">
+            
+            
+            <div class="toc-sticky toc-scroll">
+                <div class="toc-title-container">
+                <span class="toc-title">
+                    内容
+                </span>
+                </div>
+                <div class="toc-tree-container">
+                <div class="toc-tree">
+                    <div class="col-md-3"><ul>
+    <li class="">
+        <a class="reference internal aclick" href="#_1">部署文档</a>
+    </li>
+        <ul>
+        <li>
+            <a class="reference internal " href="#github-pages">GitHub Pages</a>
+        </li>
+        <li>
+            <a class="reference internal " href="#read-the-docs">Read the Docs</a>
+        </li>
+        <li>
+            <a class="reference internal " href="#_3">其他提供商</a>
+        </li>
+        <li>
+            <a class="reference internal " href="#404">404页面</a>
+        </li>
+        </ul>
+</ul></div>
+                </div>
+                </div>
+            </div>
+            
+            
+            </aside>
+        </main>
+    </div>
+    <!-- <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/llango/shadocs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../configuration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../custom-themes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div> -->
+    <script>
+    var base_url = '../..';
+
+    </script>
+    <script src="../../js/theme.js" defer></script>
+    <script src="../../js/gumshoe.js" defer></script>
+    <script src="../../js/main.js" defer></script>
+    <script src="../../search/main.js" defer></script>
+</body>
+
+</html>

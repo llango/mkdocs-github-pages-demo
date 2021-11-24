@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <meta name="author" content="llango">
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>配置文件 - 基于Github Pages 发布 MkDocs中文文档</title>
+    <!-- <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" /> -->
+    <!-- 添加的样式 -->
+    <link href="../../css/shadocs.css" rel="stylesheet">
+    <link href="../../css/shaphinx.css" rel="stylesheet">
+    <link href="../../css/shaphinx-extensions.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
+    <script>
+    // Current page data
+    var mkdocs_page_name = "\u914d\u7f6e\u6587\u4ef6";
+    var mkdocs_page_input_path = "user-guide/configuration.md";
+    var mkdocs_page_url = "/llango/shadocs/user-guide/configuration/";
+
+    </script>
+    
+    <script src="../../js/jquery-2.1.1.min.js" defer></script>
+    <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+
+    </script> 
+    
+</head>
+
+<body  role="document">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>内容</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>目录</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+    <input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+    <input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+    <label class="overlay sidebar-overlay" for="__navigation"></label>
+    <label class="overlay toc-overlay" for="__toc"></label>
+
+    
+
+    <div class="page">
+        <header class="mobile-header">
+            <div class="header-left">
+            <label class="nav-overlay-icon" for="__navigation">
+                <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+            </label>
+            </div>
+            <div class="header-center">
+                <a href="../.."> <div class="brand">基于Github Pages 发布 MkDocs中文文档 文档</div></a>
+            </div>
+            <div class="header-right">
+            <label class="toc-overlay-icon toc-header-icon" for="__toc">
+                <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+            </label>
+            </div>
+        </header>
+
+        <aside class="sidebar-drawer">
+            <div class="sidebar-container">
+            
+            <div class="sidebar-sticky">
+                <a class="sidebar-brand" href="../..">
+  
+  
+  <span class="sidebar-brand-text">基于Github Pages 发布 MkDocs中文文档 文档</span>
+  
+</a>
+                <!-- <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" title="Type search term here" />
+  </form>
+</div> -->
+                    <div role="search">
+  <form id ="rtd-search-form" class="sidebar-search-container" action="../../search.html" method="get">
+    <input class="sidebar-search" type="text" name="q" placeholder="搜索文档" title="输入关键字" />
+  </form>
+</div>
+                <div class="sidebar-scroll">
+                <div class="sidebar-tree">
+  <ul class="current">
+    
+    
+        <li class="toctree-l1">
+            <a class="reference internal" href="../..">主页</a>
+        </li>
+    
+    
+    
+        <li class="toctree-l1 has-children">
+            <a href="#" class="current reference internal">用户指南</a>
+            <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox">
+            <label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+            <ul>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../writing-your-docs/" class="reference internal">编写文档</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../styling-your-docs/" class="reference internal">设置文档样式</a>
+</li>
+            
+                
+<li class="toctree-l2  current-page">
+    <a href="./" class="reference internal current">配置文件</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../deploying-your-docs/" class="reference internal">部署文档</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../custom-themes/" class="reference internal">自定义主题</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../plugins/" class="reference internal">插件</a>
+</li>
+            
+            </ul>
+        </li>
+    
+    
+    
+        <li class="toctree-l1 has-children">
+            <a href="#" class="current reference internal">关于</a>
+            <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox">
+            <label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label>
+            <ul>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../../about/release-notes/" class="reference internal">发行说明</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../../about/contributing/" class="reference internal">贡献</a>
+</li>
+            
+                
+<li class="toctree-l2 ">
+    <a href="../../about/license/" class="reference internal">许可</a>
+</li>
+            
+            </ul>
+        </li>
+    
+    
+  </ul>
+</div>
+                
+
+                </div>
+            </div>
+            
+            </div>
+            
+<ul class="breadcrumbs">å
+    <li>
+      
+        <a class="breadcrumbs-link" href="https://github.com/llango/shadocs/edit/master/docs/user-guide/configuration.md"
+          class="icon icon-github"> 编辑该页面: GitHub</a>
+      
+    </li>
+  </ul>
+
+        </aside>
+
+        <main class="main">
+            <div class="content">
+            <article role="main">
+                <label class="toc-overlay-icon toc-content-icon" for="__toc">
+                <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+                </label>
+                
+                    <h1 id="_1">配置文件<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>所有可用配置选项的指南。</p>
+<hr />
+<h2 id="_2">简介<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>始终使用名为<code>mkdocs.yml</code>的位于项目目录中的 YAML 文件来进行设置。</p>
+<p>此配置文件必须包含<code>site_name</code>设置。 所有其他设置都是可选项。</p>
+<h2 id="_3">项目信息<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="site_name">site_name<a class="headerlink" href="#site_name" title="Permanent link">&para;</a></h3>
+<p>这是一个<strong>必需的设置</strong>，应该是一个字符串，用作项目文档的主标题。 例如：</p>
+<pre><code class="language-yaml">site_name: Marshmallow Generator
+</code></pre>
+<p>渲染主题时，此设置将作为<code>site_name</code>上下文变量传递。</p>
+<h3 id="site_url">site_url<a class="headerlink" href="#site_url" title="Permanent link">&para;</a></h3>
+<p>设置站点的规范 URL。 这将添加带有规范 URL 的链接标记到生成的 HTML 标头。</p>
+<p><strong>默认值</strong>： <code>null</code></p>
+<h3 id="repo_url">repo_url<a class="headerlink" href="#repo_url" title="Permanent link">&para;</a></h3>
+<p>置后，在每个页面上提供指向您的存储库（GitHub，Bitbucket，GitLab，...）的链接。</p>
+<pre><code class="language-yaml">repo_url: https://github.com/example/repository/
+</code></pre>
+<p><strong>默认值</strong>： <code>null</code></p>
+<h3 id="repo_name">repo_name<a class="headerlink" href="#repo_name" title="Permanent link">&para;</a></h3>
+<p>设置后，在每个页面上提供指向存储库的链接的名称。</p>
+<p><strong>默认值</strong>： <code>'GitHub'</code>, <code>'Bitbucket'</code> or <code>'GitLab'</code>， 如果<code>repo_url</code>不能匹配这些域名，则使用来自<code>repo_url</code>的域名。</p>
+<h3 id="edit_uri">edit_uri<a class="headerlink" href="#edit_uri" title="Permanent link">&para;</a></h3>
+<p>Path from the base <code>repo_url</code> to the docs directory when directly viewing a page, accounting for specifics of the repository host (e.g. GitHub, Bitbucket, etc), the branch, and the docs directory itself. MkDocs concatenates <code>repo_url</code> and <code>edit_uri</code>, and appends the input path of the page.
+直接查看页面时从基础<code>repo_url</code>到 docs 目录的路径，考虑存储库主机（例如 GitHub，Bitbucket 等），分支和 docs 目录本身的细节。 MkDocs 连接<code>repo_url</code>和<code>edit_uri</code>，并附加页面的输入路径。</p>
+<p>设置后，如果您的主题支持它，则直接提供源存储库中页面的链接。 这样可以更轻松地查找和编辑页面的源。 如果未设置<code>repo_url</code>，则忽略此选项。 在某些主题上，设置此选项可能会导致使用编辑链接代替存储库链接。 其他主题可能会显示这两个链接。</p>
+<p><code>edit_uri</code>支持查询（'？'）和片段（'＃'）字符。 对于使用查询或片段访问文件的存储库主机，可以按如下方式设置<code>edit_uri</code>。 （注意 URI 中的<code>？</code>和<code>#</code> ...）</p>
+<pre><code class="language-yaml"># Query string example
+edit_uri: &quot;?query=root/path/docs/&quot;
+</code></pre>
+<pre><code class="language-yaml"># Hash fragment example
+edit_uri: &quot;#root/path/docs/&quot;
+</code></pre>
+<p>对于其他存储库主机，只需指定 docs 目录的相对路径即可。</p>
+<pre><code class="language-yaml"># Query string example
+edit_uri: root/path/docs/
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">注意：</p>
+</div>
+<p>在一些已知的主机（特别是 GitHub，Bitbucket 和 GitLab）上，<code>edit_uri</code>是从'repo_url'派生出来的，不需要手动设置。 只需定义一个<code>repo_url</code>就会自动填充<code>edit_uri</code>配置设置。</p>
+<pre><code>例如，对于GitHub或GitLab托管的存储库，`edit_uri`将自动设置为`edit/master/docs/`（注意`edit`路径和`master`分支）。
+
+对于Bitbucket托管的存储库，等效的`edit_uri`将自动设置为`src/default/docs/`（注意`src`路径和`default`分支）。
+
+要使用与默认值不同的URI（例如不同的分支），只需将`edit_uri`设置为所需的字符串即可。如果您不希望页面上显示任何“编辑URL链接”，请将`edit_uri`设置为空字符串以禁用自动设置。
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">警告：</p>
+</div>
+<p>在 GitHub 和 GitLab 上，默认的“编辑”路径（<code>edit/master/docs/</code>）在在线编辑器中打开页面。此功能要求用户拥有并已登录 GitHub/GitLab 帐户。 否则，用户将被重定向到登录/注册页面。 或者，使用“blob”路径（<code>blob/master/docs/</code>）打开只读视图，该视图支持匿名访问。</p>
+<p><strong>默认值</strong>：<code>edit/master/docs/</code>用于 GitHub 和 GitLab 存储库，<code>src/default/docs/</code>用于 Bitbucket 存储库，如果<code>repo_url</code>匹配那些域，否则为<code>null</code></p>
+<h3 id="site_description">site_description<a class="headerlink" href="#site_description" title="Permanent link">&para;</a></h3>
+<p>设置站点描述。 这将为生成的 HTML 标头添加元标记。</p>
+<p><strong>默认值</strong>： <code>null</code></p>
+<h3 id="site_author">site_author<a class="headerlink" href="#site_author" title="Permanent link">&para;</a></h3>
+<p>设置作者的姓名。 这将为生成的 HTML 标头添加元标记。</p>
+<p><strong>默认值</strong>： <code>null</code></p>
+<h3 id="copyright">copyright<a class="headerlink" href="#copyright" title="Permanent link">&para;</a></h3>
+<p>设置版权信息以包含在主题的文档中。</p>
+<p><strong>默认值</strong>： <code>null</code></p>
+<h3 id="google_analytics">google_analytics<a class="headerlink" href="#google_analytics" title="Permanent link">&para;</a></h3>
+<p>设置 Google Analytics 跟踪配置。</p>
+<pre><code class="language-yaml">google_analytics: [&quot;UA-36723568-3&quot;, &quot;mkdocs.org&quot;]
+</code></pre>
+<p><strong>默认值</strong>： <code>null</code></p>
+<h3 id="remote_branch">remote_branch<a class="headerlink" href="#remote_branch" title="Permanent link">&para;</a></h3>
+<p>当使用<code>gh-deploy</code>来部署到 Github Pages 时，设置欲远程提交到的分支。可以通过<code>gh-deploy</code>中的命令行选项覆盖此选项。</p>
+<p><strong>默认值</strong>： <code>gh-pages</code></p>
+<h3 id="remote_name">remote_name<a class="headerlink" href="#remote_name" title="Permanent link">&para;</a></h3>
+<p>当使用<code>gh-deploy</code>部署到 Github Pages 时，设置要推送到的远程名称。 可以通过<code>gh-deploy</code>中的命令行选项覆盖此选项。</p>
+<p><strong>默认值</strong>： <code>origin</code></p>
+<h2 id="_4">文档布局<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="nav">nav<a class="headerlink" href="#nav" title="Permanent link">&para;</a></h3>
+<p>此设置用于确定站点的全局导航的格式和布局。 例如，以下内容将创建“Introduction”，“User Guide”和“About”导航项。</p>
+<pre><code class="language-yaml">nav:
+  - &quot;Introduction&quot;: &quot;index.md&quot;
+  - &quot;User Guide&quot;: &quot;user-guide.md&quot;
+  - &quot;About&quot;: &quot;about.md&quot;
+</code></pre>
+<p>所有路径必须相对于<code>mkdocs.yml</code>配置文件。 有关更详细的细分，请参阅[配置页面和导航]部分，包括如何创建子导航。</p>
+<p>导航项目还可能包括指向外部站点的链接。 虽然标题对于内部链接是可选的，但外部链接需要它们。 外部链接可以是完整 URL 或相对 URL。 假定在文件中找不到的任何路径都是外部链接。</p>
+<pre><code class="language-yaml">nav:
+  - Home: index.md
+  - User Guide: user-guide.md
+  - Bug Tracker: https://example.com/
+</code></pre>
+<p>在上面的示例中，前两个项指向本地文件，而第三个指向外部站点。</p>
+<p>但是，有时 MkDocs 站点托管在项目站点的子目录中，您可能希望链接到同一站点的其他部分而不包括完整域。 在这种情况下，您可以使用和适当的相对 URL。</p>
+<pre><code class="language-yaml">site_url: https://example.com/foo/
+
+nav:
+  - Home: ../
+  - User Guide: user-guide.md
+  - Bug Tracker: /bugs/
+</code></pre>
+<p>在上面的示例中，使用了两种不同风格的外部链接。 首先请注意，<code>site_url</code>表示 MkDocs 站点托管在域的<code>/foo/</code>子目录中。 因此，“Home”导航项是一个相对链接，它将一个级别提升到服务器根目录并有效地指向“https:// example.com/”。 “Bug Tracker”项使用来自服务器根目录的绝对路径，并有效地指向“https://example.com/bugs/”。 当然，“User Guide”指向本地 MkDocs 页面。</p>
+<p><strong>默认值</strong>：默认情况下，<code>nav</code>将包含在<code>docs_dir</code>及其子目录中找到的所有 Markdown 文件的字母数字排序的嵌套列表。如果没有找到它将是<code>[]</code>（空列表）。</p>
+<h2 id="_5">构建目录<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="theme">theme<a class="headerlink" href="#theme" title="Permanent link">&para;</a></h3>
+<p>设置文档站点的主题和主题特定配置。 可以是字符串或一组键/值对。</p>
+<p>如果是字符串，则必须是已知安装主题的字符串名称。 有关可用主题的列表，请访问[样式化您的文档]。</p>
+<p>一组示例键/值对可能如下所示：</p>
+<pre><code class="language-yaml">theme:
+  name: mkdocs
+  custom_dir: my_theme_customizations/
+  static_templates:
+    - sitemap.html
+  include_sidebar: false
+</code></pre>
+<p>如果是一组键/值对，则可以定义以下嵌套键：</p>
+<div class="admonition block">
+<h4 id="name">name:<a class="headerlink" href="#name" title="Permanent link">&para;</a></h4>
+<p>已知安装主题的字符串名称。 有关可用主题的列表，请访问[样式化您的文档]。</p>
+<h4 id="custom_dir">custom_dir:<a class="headerlink" href="#custom_dir" title="Permanent link">&para;</a></h4>
+<p>包含自定义主题的目录。 这可以是相对目录，在这种情况下，它相对于包含配置文件的目录进行解析，或者它可以是来自本地文件系统根目录的绝对目录路径。</p>
+<p>如果您想要调整现有主题，请参阅<a href="../styling-your-docs/#using-the-theme_dir">样式化您的文档</a>了解详细信息。</p>
+<p>如果您想从头开始构建自己的主题，请参阅[自定义主题]。</p>
+<h4 id="static_templates">static_templates:<a class="headerlink" href="#static_templates" title="Permanent link">&para;</a></h4>
+<p>要呈现为静态页面的模板列表。 模板必须位于主题的模板目录中或主题配置中定义的<code>custom_dir</code>中。</p>
+<h4 id="_6">主题特定关键字<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>还可以定义主题支持的任何其他关键字。 有关详细信息，请参阅您正在使用的主题的文档。</p>
+</div>
+<p><strong>默认值</strong>： <code>'mkdocs'</code></p>
+<h3 id="docs_dir">docs_dir<a class="headerlink" href="#docs_dir" title="Permanent link">&para;</a></h3>
+<p>源文档 markdown 文件的目录。 这可以是相对目录，在这种情况下，它相对于包含配置文件的目录进行解析，或者它可以是来自本地文件系统根目录的绝对目录路径。</p>
+<p><strong>默认值</strong>： <code>'docs'</code></p>
+<h3 id="site_dir">site_dir<a class="headerlink" href="#site_dir" title="Permanent link">&para;</a></h3>
+<p>为输出 HTML 和其他文件而创建的目录。 这可以是相对目录，在这种情况下，它相对于包含配置文件的目录进行解析，或者它可以是来自本地文件系统根目录的绝对目录路径。</p>
+<p><strong>默认值</strong>： <code>'site'</code></p>
+<div class="admonition note">
+<p class="admonition-title">注意：</p>
+</div>
+<p>如果您使用的是源代码控制，通常需要确保<em>输出</em>文件未提交到存储库中，并且只保留<em>源文件</em>在版本控制下。 例如，如果使用<code>git</code>，您可以将以下行添加到<code>.gitignore</code>文件中：</p>
+<pre><code>    site/
+
+如果您正在使用其他源代码控制工具，则需要查看有关如何忽略特定目录的文档。
+</code></pre>
+<h3 id="extra_css">extra_css<a class="headerlink" href="#extra_css" title="Permanent link">&para;</a></h3>
+<p>设置主题中包含到<code>docs_dir</code>中的 CSS 文件列表。 例如，以下示例将在[docs_dir]（＃docs_dir）的 css 子目录中包含 extra.css 文件。</p>
+<pre><code class="language-yaml">extra_css:
+  - css/extra.css
+  - css/second_extra.css
+</code></pre>
+<p><strong>默认值</strong>： <code>[]</code> (an empty list).</p>
+<h3 id="extra_javascript">extra_javascript<a class="headerlink" href="#extra_javascript" title="Permanent link">&para;</a></h3>
+<p>设置要包含到主题中的<code>docs_dir</code>中的 JavaScript 文件列表。请参阅<a href="#extra_css">extra_css</a>中的示例以了解用法。</p>
+<p><strong>默认值</strong>： <code>[]</code> (an empty list).</p>
+<h3 id="extra_templates">extra_templates<a class="headerlink" href="#extra_templates" title="Permanent link">&para;</a></h3>
+<p>设置要由 MkDocs 构建的<code>docs_dir</code>中的模板列表。 要了解有关为 MkDocs 编写模板的更多信息，请阅读有关[自定义主题]的文档，特别是有关模板的[可用变量]的部分。 有关用法，请参阅<a href="#extra_css">extra_css</a>中的示例。</p>
+<p><strong>默认值</strong>： <code>[]</code> (an empty list).</p>
+<h3 id="extra">extra<a class="headerlink" href="#extra" title="Permanent link">&para;</a></h3>
+<p>一组键值对，其中值可以是任何有效的 YAML 构造，将传递给模板。 这在创建自定义主题时具有很大的灵活性。</p>
+<p>例如，如果您使用的主题支持显示项目版本，则可以将其传递给主题，如下所示：</p>
+<pre><code class="language-yaml">extra:
+  version: 1.0
+</code></pre>
+<p><strong>默认值</strong>： 默认情况下，“extra”将是一个空键值映射。</p>
+<h2 id="_7">预览控制<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="use_directory_urls">use_directory_urls<a class="headerlink" href="#use_directory_urls" title="Permanent link">&para;</a></h3>
+<p>此设置控制用于链接的样式。</p>
+<p>下表演示了将“use_directory_urls”设置为“true”或“false”时网站上显示的 URL 的不同之处。</p>
+<table>
+<thead>
+<tr>
+<th>源文件</th>
+<th>use_directory_urls: true</th>
+<th>use_directory_urls: false</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index.md</td>
+<td>/</td>
+<td>/index.html</td>
+</tr>
+<tr>
+<td>api-guide.md</td>
+<td>/api-guide/</td>
+<td>/api-guide.html</td>
+</tr>
+<tr>
+<td>about/license.md</td>
+<td>/about/license/</td>
+<td>/about/license.html</td>
+</tr>
+</tbody>
+</table>
+<p><code>use_directory_urls：true</code>的默认样式创建了更多用户友好的 URL，通常是您想要使用的。</p>
+<p>如果您希望在直接从文件系统打开页面时保持文档正确链接，则备用样式有时会很有用，因为它会创建直接指向目标<em>文件</em>而非目标<em>目录</em>的链接。</p>
+<p><strong>默认值</strong>： <code>true</code></p>
+<h3 id="strict">strict<a class="headerlink" href="#strict" title="Permanent link">&para;</a></h3>
+<p>确定警告的处理方式。 设置为“true”以在发出警告时停止处理。 设置为“false”以打印警告并继续处理。</p>
+<p><strong>默认值</strong>： <code>false</code></p>
+<h3 id="dev_addr">dev_addr<a class="headerlink" href="#dev_addr" title="Permanent link">&para;</a></h3>
+<p>确定运行<code>mkdocs serve</code>时使用的地址。 必须是“IP:PORT”格式。</p>
+<p>允许设置自定义默认值，而无需在每次调用<code>mkdocs serve</code>命令时通过<code>--dev-addr</code>选项传递它。</p>
+<p><strong>默认值</strong>： <code>'127.0.0.1:8000'</code></p>
+<h2 id="_8">格式化选项<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="markdown_extensions">markdown_extensions<a class="headerlink" href="#markdown_extensions" title="Permanent link">&para;</a></h3>
+<p>MkDocs 使用<a href="https://python-markdown.github.io/">Python Markdown</a>库将 Markdown 文件翻译成 HTML。 Python Markdown 支持各种<a href="https://python-markdown.github.io/extensions/">扩展</a>，可以自定义页面的格式。 此设置允许您启用超出 MkDocs 默认使用的扩展名列表（<code>meta</code>，<code>toc</code>，<code>tables</code>和<code>fenced_code</code>）。</p>
+<p>例如，要启用<a href="https://python-markdown.github.io/extensions/smarty/">SmartyPants 排版扩展</a>，请使用：</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - smarty
+</code></pre>
+<p>某些扩展提供了自己的配置选项。 如果要设置任何配置选项，则可以嵌套给定扩展支持的任何选项的键/值映射（<code>option_name:option value</code>）。请参阅所用扩展的文档以确定它们所提供的扩展选项。</p>
+<p>例如，要在（内置的）<code>toc</code>扩展中启用永久链接，请使用：</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - toc:
+      permalink: True
+</code></pre>
+<p>请注意冒号（<code>：</code>）必须跟随扩展名（<code>toc</code>），然后在新起的一行上，选项名称和值必须缩进并用冒号分隔。如果要为单个扩展定义多个选项，则必须在单独的一行上分别定义每个选项：</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - toc:
+      permalink: True
+      separator: &quot;_&quot;
+</code></pre>
+<p>为每个扩展名添加一个附加项目到列表中。 如果没有为特定扩展设置的配置选项，则只需省略该扩展的选项：</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - smarty
+  - toc:
+      permalink: True
+  - sane_lists
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">延申阅读：</p>
+</div>
+<p>Python-Markdown 文档提供了<a href="https://python-markdown.github.io/extensions/">扩展名列表</a>，它们是开箱即用的。有关给定扩展可用的配置选项列表，请参阅该扩展的文档。</p>
+<pre><code>您也可以安装和使用各种[第三方扩展][3rd]。 有关安装说明和可用配置选项，请参阅这些扩展提供的文档。
+</code></pre>
+<p><strong>默认值</strong>： <code>[]</code> (an empty list).</p>
+<h3 id="plugins">plugins<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h3>
+<p>构建站点时要使用的插件列表（带有可选配置设置）。 有关完整详细信息，请参阅[插件]文档。</p>
+<p>如果<code>plugins</code>配置设置在<code>mkdocs.yml</code>配置文件中定义，则忽略任何默认值（例如<code>search</code>），如果要继续使用它们，则需要显式重新启用默认值：</p>
+<pre><code class="language-yaml">plugins:
+  - search
+  - your_other_plugin
+</code></pre>
+<p>要完全禁用所有插件，包括任何默认值，请将<code>plugins</code>设置为空列表：</p>
+<pre><code class="language-yaml">plugins: []
+</code></pre>
+<p><strong>默认值</strong>： <code>['search']</code> ，MkDocs 内置了该'search'插件（“搜索”）.</p>
+<h4 id="search">Search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h4>
+<p>默认情况下，MkDocs 提供了一个搜索插件，它使用<a href="https://lunrjs.com/">lunr.js</a>作为搜索引擎。以下配置选项可用于更改搜索插件的行为：</p>
+<h5 id="separator"><strong>separator</strong><a class="headerlink" href="#separator" title="Permanent link">&para;</a></h5>
+<p>一个正则表达式，它与构建索引时用作单词分隔符的字符相匹配。 默认情况下使用空格和连字符（<code>-</code>）。 要将点（<code>.</code>）添加为单词分隔符，您可以执行以下操作：</p>
+<pre><code class="language-yaml">plugins:
+  - search:
+      separator: '[\s\-\.]+'
+</code></pre>
+<p><strong>默认值</strong>： <code>'[\s\-]+'</code></p>
+<h5 id="lang"><strong>lang</strong><a class="headerlink" href="#lang" title="Permanent link">&para;</a></h5>
+<p>构建由<a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a>语言代码标识的搜索索引时使用的语言列表。 使用<a href="https://github.com/MihaiValentin/lunr-languages#lunr-languages-----">Lunr Languages</a>，支持以下语言：</p>
+<ul>
+<li><code>da</code>: Danish</li>
+<li><code>du</code>: Dutch</li>
+<li><code>en</code>: English</li>
+<li><code>fi</code>: Finnish</li>
+<li><code>fr</code>: French</li>
+<li><code>de</code>: German</li>
+<li><code>hu</code>: Hungarian</li>
+<li><code>it</code>: Italian</li>
+<li><code>jp</code>: Japanese</li>
+<li><code>no</code>: Norwegian</li>
+<li><code>pt</code>: Portuguese</li>
+<li><code>ro</code>: Romanian</li>
+<li><code>ru</code>: Russian</li>
+<li><code>es</code>: Spanish</li>
+<li><code>sv</code>: Swedish</li>
+<li><code>th</code>: Thai</li>
+<li><code>tr</code>: Turkish</li>
+</ul>
+<p>您也可以[贡献其他语言]。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告：</p>
+<p>虽然搜索支持同时使用多种语言，但最好不要添加其他语言，除非您确实需要它们。 每种附加语言都会增加大量带宽需求并使用更多浏览器资源。一般来说，最好将MkDoc的每个实例保持为单一语言。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注意：</p>
+<p>Lunr Languages目前不包括对中文或其他亚洲语言的支持。 但是，一些用户使用日语报告了不错的结果。</p>
+</div>
+<p><strong>默认值</strong>： <code>['en']</code></p>
+<h5 id="prebuild_index"><strong>prebuild_index</strong><a class="headerlink" href="#prebuild_index" title="Permanent link">&para;</a></h5>
+<p>（可选）生成所有页面的预构建索引，从而为较大的站点提供一些性能改进。在启用之前，请检查您使用的主题是否明确支持使用预建索引（内置主题可以）。</p>
+<p>预建索引有两种选择：</p>
+<p>使用<a href="https://nodejs.org/">Node.js</a>将<code>prebuild_index</code>设置为<code>True</code>或<code>node</code>。 此选项要求安装 Node.js 并且命令<code>node</code>在系统路径上。 如果启用此功能并因任何原因失败，则会发出警告。 在构建时可以使用<code>--strict</code>标志来导致这样的失败而不是引发错误。</p>
+<p>使用<a href="http://lunr.readthedocs.io/">Lunr.py</a>设置<code>prebuild_index</code>到<code>python</code>。Lunr.py 作为 mkdocs 的一部分安装，并保证与 Lunr.js 的兼容性，即使在英语以外的语言上也是如此。 如果您发现实质性的不一致或问题，请在<a href="https://github.com/yeraydiazdiaz/lunr.py/issues">Lunr.py's issues</a>上报告，然后再回到 Node.js 版本。</p>
+<div class="admonition note">
+<p class="admonition-title">注意：</p>
+<p>在较小的站点上，不建议使用预先构建的索引，因为它会造成带宽显著增加，而对用户几乎没有明显改善。但是，对于较大的站点（数百页），带宽增加相对较小，您的用户会注意到搜索性能的显着提高。</p>
+</div>
+<p><strong>默认值</strong>： <code>False</code></p>
+                
+            </article>
+            
+
+            <footer>
+                
+                <div class="related-pages">
+                        <li class="nolist">
+                            <a  class="prev-page" rel="prev" href="../styling-your-docs/">
+                                <svg><use href="#svg-arrow-right"></use></svg>
+                                <div class="page-info">
+                                    <div class="context">
+                                        <span>前一页</span>
+                                    </div>
+                                <div class="title">设置文档样式</div> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nolist ">
+                            <a  class="next-page" rel="next" href="../deploying-your-docs/">
+                                <div class="page-info">
+                                    <div class="context">
+                                    <span>下一页</span>
+                                    </div>
+                                    <div class="title">部署文档</div> 
+                                </div>
+                                <svg><use href="#svg-arrow-right"></use></svg>
+                            </a>
+                        </li>
+                </div>
+
+                <div class="related-information">
+                    
+                
+                    
+                        <p>
+                        <small>Shadocs使用证书为: <a href='https://github.com/llango/shadocs/blob/master/LICENSE.md'>MIT license</a></small><br>
+                        
+                        <small>文档使用 <a href="http://www.mkdocs.org/">MkDocs</a>构建。采用的主题为<a href="http://llango.com">llango</a>创建<a href="http://github.com/llango/shadocs">Shadocs</a>。</small>
+                        </p>
+                    
+
+                    
+            
+                    
+                </div>
+                
+            </footer>
+            </div>
+            
+            <aside class="toc-drawer">
+            
+            
+            <div class="toc-sticky toc-scroll">
+                <div class="toc-title-container">
+                <span class="toc-title">
+                    内容
+                </span>
+                </div>
+                <div class="toc-tree-container">
+                <div class="toc-tree">
+                    <div class="col-md-3"><ul>
+    <li class="">
+        <a class="reference internal aclick" href="#_1">配置文件</a>
+    </li>
+        <ul>
+        <li>
+            <a class="reference internal " href="#_2">简介</a>
+        </li>
+        <li>
+            <a class="reference internal " href="#_3">项目信息</a>
+        </li>
+        <li>
+            <a class="reference internal " href="#_4">文档布局</a>
+        </li>
+        <li>
+            <a class="reference internal " href="#_5">构建目录</a>
+        </li>
+        <li>
+            <a class="reference internal " href="#_7">预览控制</a>
+        </li>
+        <li>
+            <a class="reference internal " href="#_8">格式化选项</a>
+        </li>
+        </ul>
+</ul></div>
+                </div>
+                </div>
+            </div>
+            
+            
+            </aside>
+        </main>
+    </div>
+    <!-- <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/llango/shadocs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../styling-your-docs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../deploying-your-docs/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div> -->
+    <script>
+    var base_url = '../..';
+
+    </script>
+    <script src="../../js/theme.js" defer></script>
+    <script src="../../js/gumshoe.js" defer></script>
+    <script src="../../js/main.js" defer></script>
+    <script src="../../search/main.js" defer></script>
+</body>
+
+</html>

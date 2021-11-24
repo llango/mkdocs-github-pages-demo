@@ -6,7 +6,7 @@
 
 ## 简介
 
-始终使用名为`mkdocs.yml`的位于项目目录中的YAML文件来进行设置。
+始终使用名为`mkdocs.yml`的位于项目目录中的 YAML 文件来进行设置。
 
 此配置文件必须包含`site_name`设置。 所有其他设置都是可选项。
 
@@ -24,7 +24,7 @@ site_name: Marshmallow Generator
 
 ### site_url
 
-设置站点的规范URL。 这将添加带有规范URL的链接标记到生成的HTML标头。
+设置站点的规范 URL。 这将添加带有规范 URL 的链接标记到生成的 HTML 标头。
 
 **默认值**： `null`
 
@@ -47,23 +47,23 @@ repo_url: https://github.com/example/repository/
 ### edit_uri
 
 Path from the base `repo_url` to the docs directory when directly viewing a page, accounting for specifics of the repository host (e.g. GitHub, Bitbucket, etc), the branch, and the docs directory itself. MkDocs concatenates `repo_url` and `edit_uri`, and appends the input path of the page.
-直接查看页面时从基础`repo_url`到docs目录的路径，考虑存储库主机（例如GitHub，Bitbucket等），分支和docs目录本身的细节。 MkDocs连接`repo_url`和`edit_uri`，并附加页面的输入路径。
+直接查看页面时从基础`repo_url`到 docs 目录的路径，考虑存储库主机（例如 GitHub，Bitbucket 等），分支和 docs 目录本身的细节。 MkDocs 连接`repo_url`和`edit_uri`，并附加页面的输入路径。
 
 设置后，如果您的主题支持它，则直接提供源存储库中页面的链接。 这样可以更轻松地查找和编辑页面的源。 如果未设置`repo_url`，则忽略此选项。 在某些主题上，设置此选项可能会导致使用编辑链接代替存储库链接。 其他主题可能会显示这两个链接。
 
-`edit_uri`支持查询（'？'）和片段（'＃'）字符。 对于使用查询或片段访问文件的存储库主机，可以按如下方式设置`edit_uri`。 （注意URI中的`？`和`#` ...）
+`edit_uri`支持查询（'？'）和片段（'＃'）字符。 对于使用查询或片段访问文件的存储库主机，可以按如下方式设置`edit_uri`。 （注意 URI 中的`？`和`#` ...）
 
 ```yaml
 # Query string example
-edit_uri: '?query=root/path/docs/'
+edit_uri: "?query=root/path/docs/"
 ```
 
 ```yaml
 # Hash fragment example
-edit_uri: '#root/path/docs/'
+edit_uri: "#root/path/docs/"
 ```
 
-对于其他存储库主机，只需指定docs目录的相对路径即可。
+对于其他存储库主机，只需指定 docs 目录的相对路径即可。
 
 ```yaml
 # Query string example
@@ -71,7 +71,7 @@ edit_uri: root/path/docs/
 ```
 
 !!! note "注意："
-    在一些已知的主机（特别是GitHub，Bitbucket和GitLab）上，`edit_uri`是从'repo_url'派生出来的，不需要手动设置。 只需定义一个`repo_url`就会自动填充`edit_uri`配置设置。
+在一些已知的主机（特别是 GitHub，Bitbucket 和 GitLab）上，`edit_uri`是从'repo_url'派生出来的，不需要手动设置。 只需定义一个`repo_url`就会自动填充`edit_uri`配置设置。
 
     例如，对于GitHub或GitLab托管的存储库，`edit_uri`将自动设置为`edit/master/docs/`（注意`edit`路径和`master`分支）。
 
@@ -80,19 +80,19 @@ edit_uri: root/path/docs/
     要使用与默认值不同的URI（例如不同的分支），只需将`edit_uri`设置为所需的字符串即可。如果您不希望页面上显示任何“编辑URL链接”，请将`edit_uri`设置为空字符串以禁用自动设置。
 
 !!! warning "警告："
-    在GitHub和GitLab上，默认的“编辑”路径（`edit/master/docs/`）在在线编辑器中打开页面。此功能要求用户拥有并已登录GitHub/GitLab帐户。 否则，用户将被重定向到登录/注册页面。 或者，使用“blob”路径（`blob/master/docs/`）打开只读视图，该视图支持匿名访问。
+在 GitHub 和 GitLab 上，默认的“编辑”路径（`edit/master/docs/`）在在线编辑器中打开页面。此功能要求用户拥有并已登录 GitHub/GitLab 帐户。 否则，用户将被重定向到登录/注册页面。 或者，使用“blob”路径（`blob/master/docs/`）打开只读视图，该视图支持匿名访问。
 
-**默认值**：`edit/master/docs/`用于GitHub和GitLab存储库，`src/default/docs/`用于Bitbucket存储库，如果`repo_url`匹配那些域，否则为`null`
+**默认值**：`edit/master/docs/`用于 GitHub 和 GitLab 存储库，`src/default/docs/`用于 Bitbucket 存储库，如果`repo_url`匹配那些域，否则为`null`
 
 ### site_description
 
-设置站点描述。 这将为生成的HTML标头添加元标记。
+设置站点描述。 这将为生成的 HTML 标头添加元标记。
 
 **默认值**： `null`
 
 ### site_author
 
-设置作者的姓名。 这将为生成的HTML标头添加元标记。
+设置作者的姓名。 这将为生成的 HTML 标头添加元标记。
 
 **默认值**： `null`
 
@@ -104,23 +104,23 @@ edit_uri: root/path/docs/
 
 ### google_analytics
 
-设置Google Analytics跟踪配置。
+设置 Google Analytics 跟踪配置。
 
 ```yaml
-google_analytics: ['UA-36723568-3', 'mkdocs.org']
+google_analytics: ["UA-36723568-3", "mkdocs.org"]
 ```
 
 **默认值**： `null`
 
 ### remote_branch
 
-当使用`gh-deploy`来部署到Github Pages时，设置欲远程提交到的分支。可以通过`gh-deploy`中的命令行选项覆盖此选项。
+当使用`gh-deploy`来部署到 Github Pages 时，设置欲远程提交到的分支。可以通过`gh-deploy`中的命令行选项覆盖此选项。
 
 **默认值**： `gh-pages`
 
 ### remote_name
 
-当使用`gh-deploy`部署到Github Pages时，设置要推送到的远程名称。 可以通过`gh-deploy`中的命令行选项覆盖此选项。
+当使用`gh-deploy`部署到 Github Pages 时，设置要推送到的远程名称。 可以通过`gh-deploy`中的命令行选项覆盖此选项。
 
 **默认值**： `origin`
 
@@ -132,38 +132,38 @@ google_analytics: ['UA-36723568-3', 'mkdocs.org']
 
 ```yaml
 nav:
-    - 'Introduction': 'index.md'
-    - 'User Guide': 'user-guide.md'
-    - 'About': 'about.md'
+  - "Introduction": "index.md"
+  - "User Guide": "user-guide.md"
+  - "About": "about.md"
 ```
 
 所有路径必须相对于`mkdocs.yml`配置文件。 有关更详细的细分，请参阅[配置页面和导航]部分，包括如何创建子导航。
 
-导航项目还可能包括指向外部站点的链接。 虽然标题对于内部链接是可选的，但外部链接需要它们。 外部链接可以是完整URL或相对URL。 假定在文件中找不到的任何路径都是外部链接。
+导航项目还可能包括指向外部站点的链接。 虽然标题对于内部链接是可选的，但外部链接需要它们。 外部链接可以是完整 URL 或相对 URL。 假定在文件中找不到的任何路径都是外部链接。
 
 ```yaml
 nav:
-    - Home: index.md
-    - User Guide: user-guide.md
-    - Bug Tracker: https://example.com/
+  - Home: index.md
+  - User Guide: user-guide.md
+  - Bug Tracker: https://example.com/
 ```
 
 在上面的示例中，前两个项指向本地文件，而第三个指向外部站点。
 
-但是，有时MkDocs站点托管在项目站点的子目录中，您可能希望链接到同一站点的其他部分而不包括完整域。 在这种情况下，您可以使用和适当的相对URL。
+但是，有时 MkDocs 站点托管在项目站点的子目录中，您可能希望链接到同一站点的其他部分而不包括完整域。 在这种情况下，您可以使用和适当的相对 URL。
 
 ```yaml
 site_url: https://example.com/foo/
 
 nav:
-    - Home: ../
-    - User Guide: user-guide.md
-    - Bug Tracker: /bugs/
+  - Home: ../
+  - User Guide: user-guide.md
+  - Bug Tracker: /bugs/
 ```
 
-在上面的示例中，使用了两种不同风格的外部链接。 首先请注意，`site_url`表示MkDocs站点托管在域的`/foo/`子目录中。 因此，“Home”导航项是一个相对链接，它将一个级别提升到服务器根目录并有效地指向“https:// example.com/”。 “Bug Tracker”项使用来自服务器根目录的绝对路径，并有效地指向“https://example.com/bugs/”。 当然，“User Guide”指向本地MkDocs页面。
+在上面的示例中，使用了两种不同风格的外部链接。 首先请注意，`site_url`表示 MkDocs 站点托管在域的`/foo/`子目录中。 因此，“Home”导航项是一个相对链接，它将一个级别提升到服务器根目录并有效地指向“https:// example.com/”。 “Bug Tracker”项使用来自服务器根目录的绝对路径，并有效地指向“https://example.com/bugs/”。 当然，“User Guide”指向本地 MkDocs 页面。
 
-**默认值**：默认情况下，`nav`将包含在`docs_dir`及其子目录中找到的所有Markdown文件的字母数字排序的嵌套列表。如果没有找到它将是`[]`（空列表）。
+**默认值**：默认情况下，`nav`将包含在`docs_dir`及其子目录中找到的所有 Markdown 文件的字母数字排序的嵌套列表。如果没有找到它将是`[]`（空列表）。
 
 ## 构建目录
 
@@ -177,11 +177,11 @@ nav:
 
 ```yaml
 theme:
-    name: mkdocs
-    custom_dir: my_theme_customizations/
-    static_templates:
-        - sitemap.html
-    include_sidebar: false
+  name: mkdocs
+  custom_dir: my_theme_customizations/
+  static_templates:
+    - sitemap.html
+  include_sidebar: false
 ```
 
 如果是一组键/值对，则可以定义以下嵌套键：
@@ -212,18 +212,18 @@ theme:
 
 ### docs_dir
 
-源文档markdown文件的目录。 这可以是相对目录，在这种情况下，它相对于包含配置文件的目录进行解析，或者它可以是来自本地文件系统根目录的绝对目录路径。
+源文档 markdown 文件的目录。 这可以是相对目录，在这种情况下，它相对于包含配置文件的目录进行解析，或者它可以是来自本地文件系统根目录的绝对目录路径。
 
 **默认值**： `'docs'`
 
 ### site_dir
 
-为输出HTML和其他文件而创建的目录。 这可以是相对目录，在这种情况下，它相对于包含配置文件的目录进行解析，或者它可以是来自本地文件系统根目录的绝对目录路径。
+为输出 HTML 和其他文件而创建的目录。 这可以是相对目录，在这种情况下，它相对于包含配置文件的目录进行解析，或者它可以是来自本地文件系统根目录的绝对目录路径。
 
 **默认值**： `'site'`
 
 !!! note "注意："
-    如果您使用的是源代码控制，通常需要确保*输出*文件未提交到存储库中，并且只保留*源文件*在版本控制下。 例如，如果使用`git`，您可以将以下行添加到`.gitignore`文件中：
+如果您使用的是源代码控制，通常需要确保*输出*文件未提交到存储库中，并且只保留*源文件*在版本控制下。 例如，如果使用`git`，您可以将以下行添加到`.gitignore`文件中：
 
         site/
 
@@ -231,37 +231,37 @@ theme:
 
 ### extra_css
 
-设置主题中包含到`docs_dir`中的CSS文件列表。 例如，以下示例将在[docs_dir]（＃docs_dir）的css子目录中包含extra.css文件。
+设置主题中包含到`docs_dir`中的 CSS 文件列表。 例如，以下示例将在[docs_dir]（＃docs_dir）的 css 子目录中包含 extra.css 文件。
 
 ```yaml
 extra_css:
-    - css/extra.css
-    - css/second_extra.css
+  - css/extra.css
+  - css/second_extra.css
 ```
 
 **默认值**： `[]` (an empty list).
 
 ### extra_javascript
 
-设置要包含到主题中的`docs_dir`中的JavaScript文件列表。请参阅[extra_css]中的示例以了解用法。
+设置要包含到主题中的`docs_dir`中的 JavaScript 文件列表。请参阅[extra_css]中的示例以了解用法。
 
 **默认值**： `[]` (an empty list).
 
 ### extra_templates
 
-设置要由MkDocs构建的`docs_dir`中的模板列表。 要了解有关为MkDocs编写模板的更多信息，请阅读有关[自定义主题]的文档，特别是有关模板的[可用变量]的部分。 有关用法，请参阅[extra_css]中的示例。
+设置要由 MkDocs 构建的`docs_dir`中的模板列表。 要了解有关为 MkDocs 编写模板的更多信息，请阅读有关[自定义主题]的文档，特别是有关模板的[可用变量]的部分。 有关用法，请参阅[extra_css]中的示例。
 
 **默认值**： `[]` (an empty list).
 
 ### extra
 
-一组键值对，其中值可以是任何有效的YAML构造，将传递给模板。 这在创建自定义主题时具有很大的灵活性。
+一组键值对，其中值可以是任何有效的 YAML 构造，将传递给模板。 这在创建自定义主题时具有很大的灵活性。
 
 例如，如果您使用的主题支持显示项目版本，则可以将其传递给主题，如下所示：
 
 ```yaml
 extra:
-    version: 1.0
+  version: 1.0
 ```
 
 **默认值**： 默认情况下，“extra”将是一个空键值映射。
@@ -272,15 +272,15 @@ extra:
 
 此设置控制用于链接的样式。
 
-下表演示了将“use_directory_urls”设置为“true”或“false”时网站上显示的URL的不同之处。
+下表演示了将“use_directory_urls”设置为“true”或“false”时网站上显示的 URL 的不同之处。
 
-源文件            | use_directory_urls: true  | use_directory_urls: false
----------------- | ------------------------- | -------------------------
-index.md         | /                         | /index.html
-api-guide.md     | /api-guide/               | /api-guide.html
-about/license.md | /about/license/           | /about/license.html
+| 源文件           | use_directory_urls: true | use_directory_urls: false |
+| ---------------- | ------------------------ | ------------------------- |
+| index.md         | /                        | /index.html               |
+| api-guide.md     | /api-guide/              | /api-guide.html           |
+| about/license.md | /about/license/          | /about/license.html       |
 
-`use_directory_urls：true`的默认样式创建了更多用户友好的URL，通常是您想要使用的。
+`use_directory_urls：true`的默认样式创建了更多用户友好的 URL，通常是您想要使用的。
 
 如果您希望在直接从文件系统打开页面时保持文档正确链接，则备用样式有时会很有用，因为它会创建直接指向目标*文件*而非目标*目录*的链接。
 
@@ -304,13 +304,13 @@ about/license.md | /about/license/           | /about/license.html
 
 ### markdown_extensions
 
-MkDocs使用[Python Markdown][pymkd]库将Markdown文件翻译成HTML。 Python Markdown支持各种[扩展][pymdk-extensions]，可以自定义页面的格式。 此设置允许您启用超出MkDocs默认使用的扩展名列表（`meta`，`toc`，`tables`和`fenced_code`）。
+MkDocs 使用[Python Markdown][pymkd]库将 Markdown 文件翻译成 HTML。 Python Markdown 支持各种[扩展][pymdk-extensions]，可以自定义页面的格式。 此设置允许您启用超出 MkDocs 默认使用的扩展名列表（`meta`，`toc`，`tables`和`fenced_code`）。
 
-例如，要启用[SmartyPants排版扩展][smarty]，请使用：
+例如，要启用[SmartyPants 排版扩展][smarty]，请使用：
 
 ```yaml
 markdown_extensions:
-    - smarty
+  - smarty
 ```
 
 某些扩展提供了自己的配置选项。 如果要设置任何配置选项，则可以嵌套给定扩展支持的任何选项的键/值映射（`option_name:option value`）。请参阅所用扩展的文档以确定它们所提供的扩展选项。
@@ -319,31 +319,31 @@ markdown_extensions:
 
 ```yaml
 markdown_extensions:
-    - toc:
-        permalink: True
+  - toc:
+      permalink: True
 ```
 
 请注意冒号（`：`）必须跟随扩展名（`toc`），然后在新起的一行上，选项名称和值必须缩进并用冒号分隔。如果要为单个扩展定义多个选项，则必须在单独的一行上分别定义每个选项：
 
 ```yaml
 markdown_extensions:
-    - toc:
-        permalink: True
-        separator: "_"
+  - toc:
+      permalink: True
+      separator: "_"
 ```
 
 为每个扩展名添加一个附加项目到列表中。 如果没有为特定扩展设置的配置选项，则只需省略该扩展的选项：
 
 ```yaml
 markdown_extensions:
-    - smarty
-    - toc:
-        permalink: True
-    - sane_lists
+  - smarty
+  - toc:
+      permalink: True
+  - sane_lists
 ```
 
 !!! note "延申阅读："
-    Python-Markdown文档提供了[扩展名列表][exts]，它们是开箱即用的。有关给定扩展可用的配置选项列表，请参阅该扩展的文档。
+Python-Markdown 文档提供了[扩展名列表][exts]，它们是开箱即用的。有关给定扩展可用的配置选项列表，请参阅该扩展的文档。
 
     您也可以安装和使用各种[第三方扩展][3rd]。 有关安装说明和可用配置选项，请参阅这些扩展提供的文档。
 
@@ -357,8 +357,8 @@ markdown_extensions:
 
 ```yaml
 plugins:
-    - search
-    - your_other_plugin
+  - search
+  - your_other_plugin
 ```
 
 要完全禁用所有插件，包括任何默认值，请将`plugins`设置为空列表：
@@ -367,11 +367,11 @@ plugins:
 plugins: []
 ```
 
-**默认值**： `['search']` ，MkDocs内置了该'search'插件（“搜索”）.
+**默认值**： `['search']` ，MkDocs 内置了该'search'插件（“搜索”）.
 
 #### Search
 
-默认情况下，MkDocs提供了一个搜索插件，它使用[lunr.js]作为搜索引擎。以下配置选项可用于更改搜索插件的行为：
+默认情况下，MkDocs 提供了一个搜索插件，它使用[lunr.js]作为搜索引擎。以下配置选项可用于更改搜索插件的行为：
 
 ##### **separator**
 
@@ -379,33 +379,33 @@ plugins: []
 
 ```yaml
 plugins:
-    - search:
-        separator: '[\s\-\.]+'
+  - search:
+      separator: '[\s\-\.]+'
 ```
 
-  **默认值**： `'[\s\-]+'`
+**默认值**： `'[\s\-]+'`
 
 ##### **lang**
 
 构建由[ISO 639-1]语言代码标识的搜索索引时使用的语言列表。 使用[Lunr Languages]，支持以下语言：
 
-* `da`: Danish
-* `du`: Dutch
-* `en`: English
-* `fi`: Finnish
-* `fr`: French
-* `de`: German
-* `hu`: Hungarian
-* `it`: Italian
-* `jp`: Japanese
-* `no`: Norwegian
-* `pt`: Portuguese
-* `ro`: Romanian
-* `ru`: Russian
-* `es`: Spanish
-* `sv`: Swedish
-* `th`: Thai
-* `tr`: Turkish
+- `da`: Danish
+- `du`: Dutch
+- `en`: English
+- `fi`: Finnish
+- `fr`: French
+- `de`: German
+- `hu`: Hungarian
+- `it`: Italian
+- `jp`: Japanese
+- `no`: Norwegian
+- `pt`: Portuguese
+- `ro`: Romanian
+- `ru`: Russian
+- `es`: Spanish
+- `sv`: Swedish
+- `th`: Thai
+- `tr`: Turkish
 
 您也可以[贡献其他语言]。
 
@@ -425,9 +425,9 @@ plugins:
 
 预建索引有两种选择：
 
-使用[Node.js]将`prebuild_index`设置为`True`或`node`。 此选项要求安装Node.js并且命令`node`在系统路径上。 如果启用此功能并因任何原因失败，则会发出警告。 在构建时可以使用`--strict`标志来导致这样的失败而不是引发错误。
+使用[Node.js]将`prebuild_index`设置为`True`或`node`。 此选项要求安装 Node.js 并且命令`node`在系统路径上。 如果启用此功能并因任何原因失败，则会发出警告。 在构建时可以使用`--strict`标志来导致这样的失败而不是引发错误。
 
-使用[Lunr.py]设置`prebuild_index`到`python`。Lunr.py作为mkdocs的一部分安装，并保证与Lunr.js的兼容性，即使在英语以外的语言上也是如此。 如果您发现实质性的不一致或问题，请在[Lunr.py's issues]上报告，然后再回到Node.js版本。
+使用[Lunr.py]设置`prebuild_index`到`python`。Lunr.py 作为 mkdocs 的一部分安装，并保证与 Lunr.js 的兼容性，即使在英语以外的语言上也是如此。 如果您发现实质性的不一致或问题，请在[Lunr.py's issues]上报告，然后再回到 Node.js 版本。
 
 !!! Note "注意："
 
@@ -446,11 +446,11 @@ plugins:
 [theme_dir]: styling-your-docs.md#using-the-theme_dir
 [styling your docs]: styling-your-docs.md
 [extra_css]: #extra_css
-[Plugins]: plugins.md
+[plugins]: plugins.md
 [lunr.js]: https://lunrjs.com/
-[ISO 639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-[Lunr Languages]: https://github.com/MihaiValentin/lunr-languages#lunr-languages-----
+[iso 639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+[lunr languages]: https://github.com/MihaiValentin/lunr-languages#lunr-languages-----
 [contribute additional languages]: https://github.com/MihaiValentin/lunr-languages/blob/master/CONTRIBUTING.md
-[Node.js]: https://nodejs.org/
-[Lunr.py]: http://lunr.readthedocs.io/
-[Lunr.py's issues]: https://github.com/yeraydiazdiaz/lunr.py/issues
+[node.js]: https://nodejs.org/
+[lunr.py]: http://lunr.readthedocs.io/
+[lunr.py's issues]: https://github.com/yeraydiazdiaz/lunr.py/issues
