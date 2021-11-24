@@ -1,12 +1,12 @@
 site_name: 基于Github Pages 发布 MkDocs中文文档
-site_url: https://github.com/llango/shadocs
+site_url: mkdocs-github-pages.llango.com
 site_author: llango
 site_description: "基于Github Pages 发布 MkDocs中文文档。"
-repo_url: "https://github.com/llango/shadocs"
+repo_url: "https://github.com/llango/mkdocs-github-pages-demo"
 copyright: "Shadocs使用证书为: <a href='https://github.com/llango/shadocs/blob/master/LICENSE.md'>MIT license</a>"
 
 theme:
-  name: null
+  name: shadocs
   custom_dir: shadocs
   colorscheme: github
   highlightjs: true
@@ -15,7 +15,7 @@ theme:
   search_index_only: false
   hljs_languages:
       - yaml
-      - django
+      - python
 
 nav:
     - 主页: index.md
