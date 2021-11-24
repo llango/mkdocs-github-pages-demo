@@ -1,5 +1,5 @@
 site_name: 基于Github Pages 发布 MkDocs中文文档
-site_url: mkdocs-github-pages.llango.com
+site_url: http://mkdocs-github-pages.llango.com
 site_author: llango
 site_description: "基于Github Pages 发布 MkDocs中文文档。"
 repo_url: "https://github.com/llango/mkdocs-github-pages-demo"
